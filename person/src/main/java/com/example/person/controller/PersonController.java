@@ -19,8 +19,8 @@ public class PersonController {
 
     @Autowired
     private PersonRepository repository;
-    private final RestTemplate restTemplate;
-
+    private RestTemplate restTemplate = new RestTemplate();
+    
     @GetMapping
     public ResponseEntity<List<Person>> findAll() {
         return ResponseEntity.ok(repository.findAll());
