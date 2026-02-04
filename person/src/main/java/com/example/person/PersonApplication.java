@@ -17,7 +17,6 @@ public class PersonApplication {
 	CommandLineRunner initPersons(PersonRepository repository) {
 		return args -> {
 
-			// очищаем, чтобы при каждом старте не дублировались данные
 			repository.deleteAll();
 
 			repository.save(new Person(
