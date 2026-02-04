@@ -20,7 +20,7 @@ public class LocationController {
     private LocationRepository repository;
 
     @Autowired
-    private RestTemplate restTemplate;
+    private RestTemplate restTemplate = new RestTemplate();
 
     public LocationController(LocationRepository repository, RestTemplate restTemplate) {
         this.repository = repository;
