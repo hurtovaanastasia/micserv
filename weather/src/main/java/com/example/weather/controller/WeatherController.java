@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class WeatherController {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private RestTemplate restTemplate = new RestTemplate();
     @Value("${appid}")
     private String appId;
     @Value("${url.weather}")
